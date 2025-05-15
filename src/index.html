@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>La mia community di AI per la scuola</title>
-    <style>
-      .post {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 2px;
-        background-color: white;
-      }
-      body{
-        background-color: azure;
-      }
-    </style>
-  </head>
 
-  <body>
-    
-    <h1>La mia community di AI per la scuola</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La mia community di AI per la scuola</title>
+  <style>
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 2px;
+      background-color: white;
+    }
 
-    <div class="post">
-      <h2>Primo post</h2>
-      <p>Questo è il contenuto del primo post.</p>
-    </div>
+    body {
+      background-color: azure;
+    }
+  </style>
+</head>
 
-    <div class="post">
-      <h2>Secondo post</h2>
-      <p>Questo è il contenuto del secondo post.</p>
-    </div>
+<body>
 
-    <div class="post">
-      <h2>Terzo post</h2>
-      <p>Questo è il contenuto del terzo post.</p>
-    </div>
+  <h1>La mia community di AI per la scuola</h1>
 
-  </body>
+  {% for post in posts %}
+  <div class="post">
+    <h2>{{post.title}}</h2>
+    <p>{{post.content}}</p>
+  </div>
+  {% endfor %}
+
+
+</body>
+
 </html>
